@@ -44,11 +44,9 @@ const main = async (nearObjects) => {
       burrowContract.get_accounts_paged({ from_index: i, limit })
     );
   }
-  const accounts = (await Promise.all(promises))
-    .flat()
-    .map((a) => parseAccount(a))
-    .flat()
-    .map((a) => processAccount(a, assets, prices, lp_token_infos))
+  const accounts_from_api = (await Promise.all(promises)).flat()
+  const accounts_parsed = accounts_from_api.map((a) => parseAccount(a)).flat()
+  const accounts = accounts_parsed.map((a) => processAccount(a, assets, prices, lp_token_infos))
 
   accounts.sort((a, b) => {
     return a.healthFactor.cmp(b.healthFactor);
