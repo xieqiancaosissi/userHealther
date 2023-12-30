@@ -6,10 +6,33 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "animejs": "^3.2.1",
+    "axios": "^0.26.0",
+    "big.js": "^6.2.1",
+    "d3": "7.7.0",
+    "d3-tip": "^0.9.1",
+    "d3.js": "1.0.2",
+    "echarts": "^5.4.1",
+    "echarts-for-react": "^3.0.2",
+    "lodash": "^4.17.21",
+    "near-api-js": "^0.44.2",
+    "rc-select": "^14.0.6",
     "react": "^17.0.2",
+    "react-countdown": "^2.3.2",
     "react-dom": "^17.0.2",
+    "react-redux": "8.0.4",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react-slider": "^2.0.6",
+    "react-use": "^17.4.0",
+    "reactjs-swiper": "^0.1.0",
+    "redux": "4.2.0",
+    "redux-persist": "6.0.0",
+    "styled-components": "^6.1.0",
+    "swiper": "^6.8.3",
+    "tailwindcss": "^3.3.2",
+    "use-animate-number": "^1.0.5",
+    "web-vitals": "^1.1.2",
+    "@reduxjs/toolkit": "^1.8.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
