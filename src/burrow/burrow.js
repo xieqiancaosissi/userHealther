@@ -34,7 +34,7 @@ const main = async (nearObjects) => {
 
   const prices = parsePriceData(rawPriceData);
 
-  console.log("Num accounts: ", numAccounts);
+  // console.log("Num accounts: ", numAccounts);
   // Due to upgrade to 0.7.0, the supplied are returned from state.
   const limit = 40;
 
@@ -54,14 +54,15 @@ const main = async (nearObjects) => {
 
   console.log(
     accounts
-      .filter((a) => a.healthFactor.lt(2))
+      // .filter((a) => a.healthFactor.lt(2))
+      .filter((a) => a.accountId === "juaner19.testnet")
       .map(
         (a) =>
-          `${a.accountId} -> ${a.healthFactor
+          `${a.accountId} -> ${a.position} -->${a.healthFactor
             .mul(100)
             .toFixed(2)}% -> $${a.borrowedSum.toFixed(2)}`
       )
-      .slice(0, 20)
+      // .slice(0, 20)
   );
 }
 export { main };
