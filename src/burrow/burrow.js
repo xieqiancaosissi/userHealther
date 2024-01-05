@@ -9,7 +9,7 @@ import {
 
 Big.DP = 27;
 
-const main = async (nearObjects) => {
+const main = async (nearObjects, accountId) => {
   const { burrowContract, priceOracleContract, NearConfig } = nearObjects;
 
   const rawAssets = keysToCamel(await burrowContract.get_assets_paged());
@@ -51,11 +51,11 @@ const main = async (nearObjects) => {
   accounts.sort((a, b) => {
     return a.healthFactor.cmp(b.healthFactor);
   });
-
-  console.log(
-    accounts
+  debugger;
+  // console.log(
+ const result = accounts
       // .filter((a) => a.healthFactor.lt(2))
-      .filter((a) => a.accountId === "juaner19.testnet")
+      .filter((a) => a.accountId === accountId)
       .map(
         (a) =>
           `${a.accountId} -> ${a.position} -->${a.healthFactor
@@ -63,6 +63,7 @@ const main = async (nearObjects) => {
             .toFixed(2)}% -> $${a.borrowedSum.toFixed(2)}`
       )
       // .slice(0, 20)
-  );
+  // );
+return result;
 }
 export { main };
